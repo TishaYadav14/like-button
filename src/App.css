@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+:root {
+  --default-color: #888;
+  --active-color: #f00;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.likeBtn {
+  border: 2px solid var(--default-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  height: 70px;
+  padding: 4px 20px;
+  margin-bottom: 15px;
+  color: var(--default-color);
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.likeBtn:hover {
+  border-color: var(--active-color);
+  color: var(--active-color);
+}
+
+.liked,
+.liked:hover {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+  color: #fff;
+}
+
+.likeBtn-icon {
+  display: flex;
+}
+
+.error {
+  font-size: 20px;
 }
